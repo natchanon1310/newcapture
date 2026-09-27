@@ -1,0 +1,230 @@
+@import "tailwindcss";
+
+/* ==========================
+   Theme
+========================== */
+
+:root {
+  --background: #f8fafc;
+  --foreground: #1e293b;
+
+  --primary: #0f4c81;
+  --primary-light: #2563eb;
+  --secondary: #dbeafe;
+
+  --border: #e2e8f0;
+}
+
+/* ==========================
+   Base
+========================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* ==========================
+   Container
+========================== */
+
+.container-custom {
+  max-width: 1280px;
+  margin: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+/* ==========================
+   Section
+========================== */
+
+.section {
+  padding: 90px 0;
+}
+
+.section-title {
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.section-subtitle {
+  margin-top: 16px;
+  color: #64748b;
+  font-size: 18px;
+  line-height: 1.8;
+  max-width: 700px;
+}
+
+/* ==========================
+   Button
+========================== */
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+  padding: 14px 30px;
+  border-radius: 10px;
+  transition: .3s;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background: #0a3d69;
+}
+
+.btn-outline {
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  padding: 14px 30px;
+  border-radius: 10px;
+  transition: .3s;
+  font-weight: 600;
+}
+
+.btn-outline:hover {
+  background: var(--primary);
+  color: white;
+}
+
+/* ==========================
+   Card
+========================== */
+
+.card {
+  background: white;
+  border-radius: 18px;
+  padding: 30px;
+  border: 1px solid var(--border);
+  transition: .35s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0,0,0,.08);
+}
+
+/* ==========================
+   Navbar
+========================== */
+
+.navbar {
+  background: rgba(255,255,255,.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-link {
+  transition: .25s;
+}
+
+.nav-link:hover {
+  color: var(--primary);
+}
+
+/* ==========================
+   Hero
+========================== */
+
+.hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-title {
+  font-size: 60px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--primary);
+}
+
+.hero-description {
+  margin-top: 20px;
+  font-size: 20px;
+  line-height: 1.8;
+  color: #475569;
+  max-width: 650px;
+}
+
+/* ==========================
+   Footer
+========================== */
+
+.footer {
+  background: #0f172a;
+  color: white;
+  padding: 60px 0;
+}
+
+.footer a:hover {
+  color: #60a5fa;
+}
+
+/* ==========================
+   Animation
+========================== */
+
+.fade-up {
+  animation: fadeUp .8s ease;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media (max-width:768px){
+
+  .section{
+    padding:60px 0;
+  }
+
+  .hero{
+    min-height:auto;
+    padding:80px 0;
+  }
+
+  .hero-title{
+    font-size:40px;
+  }
+
+  .section-title{
+    font-size:32px;
+  }
+
+  .hero-description{
+    font-size:18px;
+  }
+
+}
