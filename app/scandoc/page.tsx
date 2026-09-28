@@ -206,7 +206,7 @@ export default function DocumentScanPage() {
               <div className="h-56 bg-slate-900 flex items-center justify-center relative overflow-hidden">
                 <video
                   ref={videoRef1}
-                  src="/image/จัดเตรียมเอกสาร.mp4" // 🌟 เปลี่ยนชื่อไฟล์ตามวิดีโอจริงชิ้นที่ 1
+                  src="/image/doc1.mp4" // 🌟 เปลี่ยนชื่อไฟล์ตามวิดีโอจริงชิ้นที่ 1
                   muted
                   loop
                   playsInline
@@ -270,7 +270,7 @@ export default function DocumentScanPage() {
               <div className="h-56 bg-slate-900 flex items-center justify-center relative overflow-hidden">
                 <video
                   ref={videoRef3}
-                  src="/image/ตรวจเช็คคุณภาพ.mp4" // 🌟 เปลี่ยนชื่อไฟล์ตามวิดีโอจริงชิ้นที่ 3
+                  src="/image/doc3.mp4" // 🌟 เปลี่ยนชื่อไฟล์ตามวิดีโอจริงชิ้นที่ 3
                   muted
                   loop
                   playsInline
