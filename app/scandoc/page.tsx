@@ -41,6 +41,16 @@ export default function DocumentScanPage() {
     setHoveredCard(null);
     if (ref.current) {
       ref.current.pause();
+      ref.current.currentTime = 0;
+    }
+  };
+
+  const handleVideoLoaded = (
+    ref: React.RefObject<HTMLVideoElement | null>
+  ) => {
+    if (ref.current) {
+      ref.current.pause();
+      ref.current.currentTime = 0;
     }
   };
 
@@ -210,7 +220,8 @@ export default function DocumentScanPage() {
                   muted
                   loop
                   playsInline
-                  poster="/image/portfolio-1.jpg"
+                  preload="auto"
+                  onLoadedData={() => handleVideoLoaded(videoRef1)}
                   className="w-full h-full object-cover absolute inset-0 transition-all duration-700 ease-out transform group-hover:scale-125"
                   style={{ opacity: hoveredCard === 1 ? 1 : 0.85 }}
                 />
@@ -242,7 +253,8 @@ export default function DocumentScanPage() {
                   muted
                   loop
                   playsInline
-                  poster="/image/สแกนหนังสือแบบตัดขอบ.png"
+                  preload="auto"
+                  onLoadedData={() => handleVideoLoaded(videoRef2)}
                   className="w-full h-full object-cover absolute inset-0 transition-all duration-700 ease-out transform group-hover:scale-125"
                   style={{ opacity: hoveredCard === 2 ? 1 : 0.85 }}
                 />
@@ -274,7 +286,8 @@ export default function DocumentScanPage() {
                   muted
                   loop
                   playsInline
-                  poster="/image/portfolio-3.jpg"
+                  preload="auto"
+                  onLoadedData={() => handleVideoLoaded(videoRef3)}
                   className="w-full h-full object-cover absolute inset-0 transition-all duration-700 ease-out transform group-hover:scale-125"
                   style={{ opacity: hoveredCard === 3 ? 1 : 0.85 }}
                 />
