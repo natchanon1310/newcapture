@@ -20,8 +20,10 @@ export const metadata: Metadata = {
     default: "NewCapture | Digital Document Solutions",
     template: "%s | NewCapture",
   },
+
   description:
     "ผู้เชี่ยวชาญด้านบริการสแกนเอกสาร สแกนไมโครฟิล์ม และสแกนเอกสารขนาดใหญ่ A0 ด้วยมาตรฐานระดับมืออาชีพ",
+
   keywords: [
     "Scan Document",
     "Document Scanning",
@@ -31,6 +33,13 @@ export const metadata: Metadata = {
     "OCR",
     "NewCapture",
   ],
+
+  icons: {
+    icon: "/icon.png",
+  },
+
+
+ 
 };
 
 export default function RootLayout({
